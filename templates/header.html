@@ -3,7 +3,7 @@
     <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
             <a class="navbar-brand" href="https://hamburgduo.github.io/">
-                <img src="{% static '/images/logo.png' %}" with="100px">
+                <img src="{% static '/images/logo.png' %}" style="margin-top: -20px" with="100px">
             </a>
         </div>
         <div>
@@ -11,7 +11,10 @@
                 <li><a href="{% url  'blog:blog_title' %}"></a></li>
             </ul>
             <ul class="nav navbar-nav" role="navigation">
-                <li><a href="#">LOGIN</a></li>>
+                <li><a href="#">BLOG</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">LOGIN</a></li>
             </ul>
         </div>
     </nav>
