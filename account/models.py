@@ -4,6 +4,8 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
 
+# Create your models here.
+
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, unique=True)
@@ -13,4 +15,15 @@ class UserProfile(models.Model):
     def __str__(self):
         return 'user {}'.format(self.user.username)
 
-# Create your models here.
+
+class UserInfo(models.Model):
+    user = models.OneToOneField(User, unique=True)
+    school = models.CharField(max_length=100, blank=True)
+    company = models.CharField(max_length=100, blank=True)
+    profession = models.CharField(max_length=100, blank=True)
+    address = models.CharField(max_length=100, blank=True)
+    about_me = models.TextField(blank=True)
+
+    def __str__(self):
+        return 'user:{}'.format(self.user.username)
+

@@ -28,5 +28,8 @@ urlpatterns = [
          'post_reset_redirect': '/account/password-reset-done'}, name='password_reset'),
     url(r'^password-reset-done/$', auth_views.password_change_done,
         {'template_name': 'account/password_reset_done.html'}, name='password_reset_done'),
-    url(r'^password-reset-confirm/(?P<uidb64>[-\w]+)/(?P<token>[-\w]+)/$', auth_views.password_reset_confirm)
+    url(r'^password-reset-confirm/(?P<uidb64>[-\w]+)/(?P<token>[-\w]+)/$', auth_views.password_reset_confirm),
+    url(r'^password-reset-complete/$', auth_views.password_reset_complete,
+        {'template_name': 'account/password_reset_complete.html'}, name='password-reset-complete'),
+    url(r'^my-information/$', views.myself, name='my_information')
 ]
